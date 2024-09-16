@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 import NextTopLoader from "nextjs-toploader";
 import "./globals.css";
+import { Toaster } from "@/components/ui/toaster";
 
 const outfit = Outfit({ subsets: ["latin"] });
 
@@ -33,6 +34,7 @@ export default function RootLayout({
         <body className={`${outfit.className} antialiased`}>
           <NextTopLoader color="#000" />
           {children}
+          <Toaster />
         </body>
       </html>
     </ClerkProvider>
