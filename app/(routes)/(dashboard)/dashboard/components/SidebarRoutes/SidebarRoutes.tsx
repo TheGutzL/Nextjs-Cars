@@ -1,11 +1,14 @@
 "use client";
 
 import { useAuth } from "@clerk/nextjs";
+import { redirect } from "next/navigation";
 import { SidebarItem } from "./SidebarItem";
 import { dataAdminSidebar, dataGeneralSidebar } from "./SidebarRoutes.data";
 
 const SidebarRoutes = () => {
   const { userId } = useAuth();
+
+  if (!userId) return redirect("/");
 
   return (
     <div className="flex flex-col justify-between h-full">

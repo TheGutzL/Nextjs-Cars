@@ -5,7 +5,5 @@ export default function LayoutAdminCarsManager({
 }: {
   children: React.ReactNode;
 }) {
-  return (
-    <div>{ children}</div>
-  );
+  return <div>{children}</div>;
 }
