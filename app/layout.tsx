@@ -21,6 +21,9 @@ const outfit = Outfit({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Admin Gutz",
   description: "Course Rental Cars by Gutz",
+  icons: {
+    icon: "/logo.svg"
+  }
 };
 
 export default function RootLayout({
